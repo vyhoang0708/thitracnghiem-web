@@ -1,0 +1,96 @@
+* {box-sizing: border-box;}
+body {font-family: Verdana, sans-serif;}
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  z-index: 1;
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+  margin-top: 67px;
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+.slide{
+  height: 450px;
+  width: 100%;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+.row {
+  margin-left: 8px;
+}
+.row::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.col {
+  float: left;
+  width: 20%
+}
+
+.exam{
+  padding: 30px;
+}
+#listExam{
+  width: 80%;
+  margin-left: 130px;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  flex-flow: wrap;
+}
+.itemExam {
+  width: 29%;
+  padding: 20px;
+  border: 4px;
+  margin: 10px;
+  border-color: #0d6453;
+  border-style: ridge;
+  height: auto;
+}
+.button {
+  width: 100%;
+  font-size: 17px;
+  font-weight: 400;
+  padding: 5px;
+  margin-top: 10px;
+  background: #16a085;
+  border: 1px solid #16a085;
+  cursor: pointer;
+}
+
+.none{
+  display: none;
+}

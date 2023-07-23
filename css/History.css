@@ -1,0 +1,43 @@
+.img {
+    width: 50%;
+    border-radius: 50%;
+    margin: 20px 0 5px;
+}
+
+.examDetail {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+}
+
+.examDetail p {
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.historyTest {
+    width: 75%;
+    margin-left: 3px;
+    padding: 20px;
+    border: 3px;
+    border-color: #0d6453;
+    border-style: ridge;
+    height: auto;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+   
+}
+th{
+     background-color: #1abc9c;
+}
+td,
+th {
+    border: 1px solid #7c7a7a;
+    text-align: center;
+    padding: 8px;
+}

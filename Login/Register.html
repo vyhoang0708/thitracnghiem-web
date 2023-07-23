@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/Login.css">
+    <script src="../js/code.jquery.com_jquery-3.7.0.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+</head>
+<body>
+    <div class="containerDK">
+        <div class="wrapper">
+          <div class="title"><span>Register Form</span></div>
+          <form id="formRegister">
+            <div class="row">
+              <div class="col">
+                <i class="fas fa-user"></i>
+                <input type="text" id="userName" placeholder="User Name" required>
+              </div>
+              <div class="col left">
+                <i class="fas fa-user"></i>
+                <input type="text" id="name" placeholder="Họ Tên" required>
+              </div>
+            </div>    
+            <div class="row">
+                <div class="col">
+                    <i class="fas fa-envelope"></i>
+                    <input type="text" id="email" placeholder="Email" required>
+                </div>
+                <div class="col left" >
+                    <i class="fas fa-phone"></i>
+                    <input type="text" id="phone" placeholder="Số điện thoại" required>
+                </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <i class="fas fa-lock"></i>
+                <input type="password" id="pass" placeholder="Password" required>
+              </div>
+              <div class="col left">
+                <i class="fas fa-lock"></i>
+                <input type="password" id="confirmPass" placeholder="Confirm Password" required>
+              </div>
+            </div>
+            <div class="row button">
+              <input type="submit" value="Đăng Ký">
+            </div>
+            <div class="signup-link">Bạn đã có tài khoản? <a href="Login.html">Đăng Nhập</a></div>
+          </form>
+        </div>
+      </div>
+</body>
+<script src="../js/Register.js"></script>
+</html>
