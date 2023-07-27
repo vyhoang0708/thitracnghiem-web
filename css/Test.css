@@ -69,3 +69,6 @@
   display: flex;
   flex-flow: wrap;
 }
+.selected {
+  background-color: #16a085;
+}

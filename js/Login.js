@@ -1,5 +1,6 @@
 $(document).ready(function () {
     $("#formLogin").submit(async function (e) {
+        let isLoggedIn = false;
         e.preventDefault()
         const userName = $("#username").val();
         const pass = $("#password").val();
@@ -35,6 +36,7 @@ $(document).ready(function () {
                     className: "custom-toast"
                     }).showToast();
             }
+            isLoggedIn = true;
         } catch (error) {
             console.error(error);
         }

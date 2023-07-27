@@ -22,6 +22,16 @@ $(document).ready(function () {
       }
     }, 1000); // Cập nhật giá trị đồng hồ sau mỗi giây (1000ms)
   }
+  $('#question').on('change', 'input[type="radio"]', function() {
+    const inputName = $(this).attr('name');
+    console.log('Input Name:', inputName);
+    $('#listBlock .block').each(function() {
+      // Kiểm tra nếu giá trị của thẻ là "a", thêm class "selected"
+      if ($(this).text().trim() === inputName) {
+        $(this).addClass('selected');
+      }
+    });
+  });
     var urlParams = new URLSearchParams(window.location.search);
     var idFromURL = urlParams.get('id');
     const token = JSON.parse(localStorage.getItem("token"))?.accessToken
@@ -71,7 +81,7 @@ $(document).ready(function () {
           item.question?.answers
             ? `<form>
                 ${item.question.answers.map((i) => `
-                  <input type="radio" id="${i.idAnswer}" name="question_${index}" value="${i.dapAn}">
+                  <input type="radio" id="${i.idAnswer}" name="${index+1}" value="${i.dapAn}">
                   <label for="${i.idAnswer}">${i.dapAn}</label><br>`).join('')
               }</form>`
             : ''
@@ -79,6 +89,10 @@ $(document).ready(function () {
       </div>`
     );  
        $('#question').html(items);
+       const block = data.map((item, index)=>`
+       <div class="block">${index+1}</div>
+       `);
+       $('#listBlock').html(block);
     })
     .catch(error => {
       // Xử lý lỗi nếu có
