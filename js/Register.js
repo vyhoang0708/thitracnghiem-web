@@ -36,7 +36,7 @@ $(document).ready(function () {
                     window.location.href = "/Login/Login.html"
                 }else{
                     Toastify({
-                        text: "Đăng ký thất bại",
+                        text: kq.data.message,
                         duration: 3000, // 3 seconds
                         gravity: "top", // Position: top, bottom, left, right
                         backgroundColor: "linear-gradient(to right, #00b09b, #e73535)",

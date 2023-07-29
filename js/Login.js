@@ -29,7 +29,7 @@ $(document).ready(function () {
                 window.location.href="/Page/Exam.html"
             }else{
                 Toastify({
-                    text: "Đăng nhập thất bại",
+                    text: kq.data.message,
                     duration: 3000, // 3 seconds
                     gravity: "top", // Position: top, bottom, left, right
                     backgroundColor: "linear-gradient(to right, #00b09b, #e73535)",

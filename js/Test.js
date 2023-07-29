@@ -1,4 +1,19 @@
 $(document).ready(function () {
+  $('#submitTest').on('click', function() {
+    // const otherPageURL = '/Page/Sores.html'; 
+    // window.location.href = otherPageURL;
+    const selectedAnswers = {};
+
+    // Lặp qua từng nhóm radio button (tương ứng với từng câu hỏi)
+    $('input[type="radio"]').each(function() {
+      const questionIndex = $(this).attr('name');
+      const selectedId = $('input[name="' + questionIndex + '"]:checked').attr('id');
+      if (selectedId) {
+        selectedAnswers[questionIndex] = selectedId;
+      }
+    });
+    console.log(selectedAnswers)
+  });
   function startCountdown(durationInSeconds) {
     let timer = durationInSeconds;
     let hours, minutes, seconds;
