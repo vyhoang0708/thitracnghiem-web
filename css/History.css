@@ -1,7 +1,7 @@
 .img {
     width: 50%;
     border-radius: 50%;
-    margin: 20px 0 5px;
+    margin: 30px 0 5px;
 }
 
 .examDetail {
@@ -11,12 +11,14 @@
     align-items: center;
 }
 
-.examDetail p {
+.examDetail .name {
     font-weight: 600;
     font-size: 20px;
+    margin: 10px;
 }
 
 .historyTest {
+    display: flex;
     width: 75%;
     margin-left: 3px;
     padding: 20px;
@@ -40,4 +42,10 @@ th {
     border: 1px solid #7c7a7a;
     text-align: center;
     padding: 8px;
+}
+tr{
+    height: 50px;
+}
+.mt-5{
+    margin-top: 5px;
 }

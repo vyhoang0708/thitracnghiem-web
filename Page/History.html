@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="/css/History.css">
     <script src="/js/code.jquery.com_jquery-3.7.0.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/default.asp.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
 </head>
 
 <body>
@@ -21,15 +21,23 @@
             <div class="test">
                 <div class="examDetail">
                     <img class="img" src="/img/avar.jpg">
-                    <p>Lê Phương Anh</p>
-                    
+                    <div class="name" id="name">Lê Phương Anh</div>
+                    <div class="mt-5" id="email">email : 123@gmail.com</div>
+                    <div class="mt-5" id="SDT">SDT: 0988765734</div>
                 </div>
                 <div class="historyTest">
                    <table>
+                    <thead>
                         <th>Ngày thi</th>
                         <th>Bài thi</th>
                         <th>Điểm</th>
                         <th>Tác vụ</th>
+                    </thead>
+                    <tbody id="history">
+                        
+                         
+                    </tbody>
+                        
                    </table>
                 </div>
             </div>
@@ -39,6 +47,6 @@
 
 
 </body>
-<script src="/Common/Header.html"></script>
+<script src="/js/History.js"></script>
 <script src="/js/Include.js"></script>
 </html>

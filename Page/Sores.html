@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="/css/header.css">
-    <link rel="stylesheet" href="/css/Test.css">
+    <link rel="stylesheet" href="/css/Sores.css">
     <script src="/js/code.jquery.com_jquery-3.7.0.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <!-- <th:block th:include="/Common/Header.html :: header"></th:block> -->
@@ -17,21 +17,17 @@
 
         <div id="includedContent"></div>
         <div class="body">
-            <h3 id="nameExam" class="text"></h3>
-            <div class="test">
-                <div class="examDetail">
-                    <div>Thời gian làm bài:</div>
-                    <div id="countdown">00:00:00</div>
-                    <button class="button " id="submitTest">Nộp bài</button>
-                    <div class="signup-link"><a type="submit" id="uncheckAllBtn">Khôi phục></a></div>
-                    <div>Câu hỏi:</div>
-                    <div id="listBlock">
-                        <div class="block selected">1</div>
+            <div class="examDetail">
+                <div class="msg">Nộp bài thành công</div>
+                <div class="diem">
+                    <div id="DT" class="mt-2"></div>
+                    <div class="mt-2" id="answerTrue">222</div>
+                    <div id="diem" class="mt-2"></div>
+                    <div class=" button mt">
+                        <input type="submit" value="Đề thi">
                     </div>
-                    
                 </div>
-                <div id="question" >
-                </div>
+
             </div>
 
         </div>
@@ -41,4 +37,5 @@
 </body>
 <script src="/js/Test.js"></script>
 <script src="/js/Include.js"></script>
+
 </html>
