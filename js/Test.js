@@ -159,9 +159,10 @@ $(document).ready(function () {
 
     // const otherPageURL = '/Page/Sores.html?id=' +idFromURL;
     // window.location.href = otherPageURL;
-    sores();
-    
-    
+    var confirmation = confirm("Xác nhận nộp bài");
+    if (confirmation) {
+     sores();
+    }
   });
   
 });  
