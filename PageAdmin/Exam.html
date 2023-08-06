@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Sidebar Navigation Template Example</title>
+  <link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/menu-style.css">
+  <link rel="stylesheet" href="/css/PageExam.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+  <script src="/js/code.jquery.com_jquery-3.7.0.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script  src="/js/menu.js"></script>
+  <script src="/js/Include.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+  <style>
+    .content {
+      margin: 3rem;
+    }
+
+    .lead {
+      font-size: 1.5rem;
+      font-weight: 300;
+    }
+  </style>
+
+
+</head>
+
+<body>
+  <!--wrapper start-->
+  <div class="wrapper">
+
+    <div id="includedSitebar"></div>
+    <!--main container start-->
+    <div class="main-container">
+      <div class="content">
+        <div class="tableExam">
+            <button class="button">Thêm mới</button>
+            <table>
+            <thead>
+                <th>STT</th>
+                <th>Tên Đề Thi</th>
+                <th>Ngày Tạo</th>
+                <th>Thời Gian</th>
+                <th>Số câu</th>
+                <th>Tác vụ</th>
+            </thead>
+            <tbody id="loadExam">
+                
+                 
+            </tbody>
+                
+           </table></div>
+        <div id="carbon-block" style="margin:30px auto"></div>
+      </div>
+    </div>
+        <!-- Modal HTML -->
+        <div id="myModal" class="modal fade" tabindex="-1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Tạo Đề Thi</h5>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row mt-3">
+                            <input type="text" placeholder="Tên đề thi" id="tenDT" required>
+                        </div>
+                        <div class="row mt-3">
+                            <input type="number" placeholder="Số câu hỏi" id="cauHoi" required>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button  class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                        <button  class="btn btn-primary" id="submitAddExem">Save</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- modal add question -->
+        <div id="modalAddQuestion" class="modal fade" tabindex="-1">
+          <div class="modal-dialog" style="max-width: 750px; max-height: 550px; overflow-y:scroll" >
+              <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title">Tạo Đề Thi</h5>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  </div>
+                  <div class="modal-body">
+                    <div class="">
+                        <table>
+                        <thead>
+                            <th>STT</th>
+                            <th>Thể loại</th>
+                            <th>Nội dung</th>
+                            <th>Tác vụ</th>
+                        </thead>
+                        <tbody id="loadQuestion">
+                            
+                             
+                        </tbody>
+                            
+                       </table></div>
+                </div>
+                  <div class="modal-footer">
+                      <button  class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                      <button  class="btn btn-primary" id="submitAddQuestion">Save</button>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  <!-- modal -->
+  
+</div>
+</body>
+<script src="/js/PageExam.js"></script>
+<script>
+    $(document).ready(function(){
+        $(".button").click(function(){
+            $("#myModal").modal('show');
+        });
+    });
+</script>
+</html>

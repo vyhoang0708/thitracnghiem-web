@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Sidebar Navigation Template Example</title>
+  <link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/menu-style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+  <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script> -->
+  <script src="/js/code.jquery.com_jquery-3.7.0.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script  src="/js/menu.js"></script>
+  <script src="/js/Include.js"></script>
+  <style>
+    .content {
+      margin: 3rem;
+    }
+
+    .lead {
+      font-size: 1.5rem;
+      font-weight: 300;
+    }
+  </style>
+
+
+</head>
+
+<body>
+  <!--wrapper start-->
+  <div class="wrapper">
+
+    <div id="includedSitebar"></div>
+    <!--main container start-->
+    <div class="main-container">
+      <div class="content">
+        <div id="carbon-block" style="margin:30px auto"></div>
+      </div>
+    </div>
+  </div>
+</body>
+<script>
+  function toggleSidebar() {
+        console.log("1");
+        $(".wrapper").toggleClass("collapse");
+      }
+</script>
+</html>

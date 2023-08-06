@@ -6,3 +6,5 @@ xhr.onreadystatechange = function () {
 };
 xhr.open("GET", "/Common/Header.html", true);
 xhr.send();
+
+
