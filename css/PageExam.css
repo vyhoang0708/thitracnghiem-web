@@ -52,3 +52,8 @@ td i{
 td i:hover{
     background-color: #1abc9c;
 }
+.selectBox{
+    margin-left: 26px;
+    width: 85%;
+    height: 40px;
+}

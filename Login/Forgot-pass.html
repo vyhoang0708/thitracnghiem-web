@@ -9,15 +9,16 @@
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 </head>
 <body>
   <div class="container">
     <div class="wrapper">
       <div class="title"><span>Forgot Pass</span></div>
-      <form action="#">
+      <form id="submitEmail">
         <div class="row">
           <i class="fas fa-envelope"></i>
-          <input type="text" placeholder="Email" required>
+          <input type="text" placeholder="Email" id="email" required>
         </div>
         <div class="row button">
           <input type="submit" value="Gửi Mã">
@@ -27,5 +28,5 @@
     </div>
   </div>
 </body>
-<script src="../js/Login.js"></script>
+<script src="../js/Email.js"></script>
 </html>

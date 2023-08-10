@@ -96,7 +96,9 @@ $(document).ready(function () {
         }
     });
     $(document).on("click", ".deleteButton", async function () {
-        var id = $(this).closest("td").attr("id");
+        var confirmation = confirm("Xác nhận xóa đề thi");
+        if (confirmation) {
+            var id = $(this).closest("td").attr("id");
         console.log("Id được lấy từ nút xóa: " + id);
         const token = JSON.parse(localStorage.getItem("token"))?.accessToken
         await fetch(`http://localhost:8081/api/exam/delete/${id}`, {
@@ -107,9 +109,10 @@ $(document).ready(function () {
         })
             .then(response => {
                 if (!response.ok) {
+                    console.log("111");
                     throw new Error("Đã xảy ra lỗi khi xóa dữ liệu.");
                 }
-                console.log("Dữ liệu đã được xóa thành công!");
+                
                 Toastify({
                     text: "Xóa thành công",
                     duration: 3000, // 3 seconds
@@ -129,6 +132,8 @@ $(document).ready(function () {
                     className: "custom-toast"
                 }).showToast();
             });
+        }
+        
     });
     $(document).on("click", ".addButton", async function () {
         $("#modalAddQuestion").modal('show');
@@ -175,15 +180,15 @@ $(document).ready(function () {
         const checkedIDs = [];
         var dt;
         $('#loadQuestion input[type="checkbox"]').each(function () {
-            
+
             if ($(this).is(':checked')) {
                 dt = $(this).parent().attr('name');
-              // If the checkbox is checked, get the ID from the parent <td> element and push it to the array
-              checkedIDs.push({
-                idCH: $(this).parent().attr('id')
-              });
+                // If the checkbox is checked, get the ID from the parent <td> element and push it to the array
+                checkedIDs.push({
+                    idCH: $(this).parent().attr('id')
+                });
             }
-          });
+        });
         console.log(checkedIDs);
         const token = JSON.parse(localStorage.getItem("token"))?.accessToken
         try {
@@ -201,6 +206,7 @@ $(document).ready(function () {
             var kq = await response.json()
             console.log(kq);
             if (kq.status) {
+                
                 Toastify({
                     text: "Thêm thành công",
                     duration: 3000, // 3 seconds
@@ -208,7 +214,8 @@ $(document).ready(function () {
                     backgroundColor: "linear-gradient(to right, #259e5c, #20864e)",
                     className: "custom-toast"
                 }).showToast();
-                $("#myModal").modal('hide')
+                $("#modalAddQuestion").modal('hide')
+                loadData();
             } else {
                 Toastify({
                     text: "Đã xãy ra lỗi! Vui lòng thử lại",
@@ -224,7 +231,7 @@ $(document).ready(function () {
         }
     }
     $('#submitAddQuestion').on('click', async function () {
-        
+
         addQuestion();
     });
 });  
