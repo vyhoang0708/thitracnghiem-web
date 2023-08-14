@@ -233,6 +233,12 @@ body{
     margin-left: 70px;
 }
 
+.logout-btn{
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+}
+
         /**Collapse design end**/
 
 

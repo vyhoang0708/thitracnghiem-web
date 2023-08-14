@@ -16,6 +16,11 @@
   align-content: center;
   align-items: center;
 }
+.examDetail-sticky{
+  height: fit-content !important;
+  position: sticky !important;
+  top: 58px;
+}
 .text{
   text-align: center;
 }
@@ -72,4 +77,7 @@
 .selected {
   background-color: #16a085;
   
+}
+.answerTrue{
+  background-color: #16a085;
 }

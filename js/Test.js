@@ -1,7 +1,7 @@
 $(document).ready(function () {
   let answerTrue = localStorage.getItem("answerTrue");
   let diemSo = localStorage.getItem("diemSo");
-  $("#answerTrue").text("Số câu đúng: " + answerTrue );
+  $("#answerTrue").text("Số câu đúng: " + answerTrue);
   $("#diem").text("Điểm số: " + diemSo);
   async function sores() {
     const selectedAnswers = [];
@@ -39,15 +39,15 @@ $(document).ready(function () {
         })
       });
       var kq = await response.json()
-      
-      if (kq !== null){ 
+
+      if (kq !== null) {
         localStorage.setItem("answerTrue", kq.cauDung);
         localStorage.setItem("diemSo", kq.diem);
 
-        const otherPageURL = '/Page/Sores.html?id=' +idFromURL;
+        const otherPageURL = '/Page/Sores.html?id=' + idFromURL;
         window.location.href = otherPageURL;
       }
-         
+
     } catch (error) {
       console.error(error);
     }
@@ -152,7 +152,12 @@ $(document).ready(function () {
       console.error('Đã xảy ra lỗi:', error);
     });
   $('#uncheckAllBtn').on('click', function () {
-    $('input[type="radio"]').prop('checked', false);
+    var confirmation = confirm("Xác nhận khôi phục");
+    if (confirmation) {
+      $('input[type="radio"]').prop('checked', false);
+      $('#listBlock .block').removeClass('selected');
+    }
+
   });
 
   $('#submitTest').on('click', function () {
@@ -161,8 +166,8 @@ $(document).ready(function () {
     // window.location.href = otherPageURL;
     var confirmation = confirm("Xác nhận nộp bài");
     if (confirmation) {
-     sores();
+      sores();
     }
   });
-  
+
 });  

@@ -6,11 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="/css/header.css">
-    <link rel="stylesheet" href="/css/Sores.css">
+    <link rel="stylesheet" href="/css/Test.css">
     <script src="/js/code.jquery.com_jquery-3.7.0.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
-    <!-- <th:block th:include="/Common/Header.html :: header"></th:block> -->
 </head>
 
 <body>
@@ -18,17 +17,12 @@
 
         <div id="includedContent"></div>
         <div class="body">
-            <div class="examDetail">
-                <div class="msg">Nộp bài thành công</div>
-                <div class="diem">
-                    <div id="DT" class="mt-2"></div>
-                    <div class="mt-2" id="answerTrue">222</div>
-                    <div id="diem" class="mt-2"></div>
-                    <div class=" button mt">
-                        <input type="submit" onclick="myFunction()" value="Đề thi">
-                    </div>
+            <h2 id="nameExam" class="text"></h2>
+            <div class="test" style="justify-content: center; margin-left: 60px;">
+                
+                <div id="question" >
+                       
                 </div>
-
             </div>
 
         </div>
@@ -36,11 +30,6 @@
 
 
 </body>
-<script src="/js/Test.js"></script>
+<script src="/js/HistoryTest.js"></script>
 <script src="/js/Include.js"></script>
-<script>
-    function myFunction() {
-  window.location.href = "Exam.html";
-}
-</script>
 </html>

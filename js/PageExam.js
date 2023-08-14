@@ -108,12 +108,8 @@ $(document).ready(function () {
             }
         })
             .then(response => {
-                if (!response.ok) {
-                    console.log("111");
-                    throw new Error("Đã xảy ra lỗi khi xóa dữ liệu.");
-                }
-                
-                Toastify({
+                if (!response.redirected) {
+                    Toastify({
                     text: "Xóa thành công",
                     duration: 3000, // 3 seconds
                     gravity: "top", // Position: top, bottom, left, right
@@ -121,6 +117,17 @@ $(document).ready(function () {
                     className: "custom-toast"
                 }).showToast();
                 loadData();
+                }
+                else{
+                    Toastify({
+                        text: "Đề thi đã có User làm bài, Không thể xóa",
+                        duration: 3000, // 3 seconds
+                        gravity: "top", // Position: top, bottom, left, right
+                        backgroundColor: "linear-gradient(to right, #eb6a6a, #eb6a6a)",
+                        className: "custom-toast"
+                    }).showToast();
+                }
+                
             })
             .catch(error => {
                 console.error("Đã xảy ra lỗi khi xóa dữ liệu: ", error);

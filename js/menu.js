@@ -1,9 +1,9 @@
-
-
+function toggleSidebar() {
+    console.log("1");
+    $(".wrapper").toggleClass("collapse");
+  }
 $(document).ready(function () {
-    function toggleSidebar() {
-        $(".wrapper").toggleClass("collapse");
-      }
+    
       
     var sitebar = new XMLHttpRequest();
     sitebar.onreadystatechange = function () {

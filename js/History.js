@@ -27,7 +27,7 @@ $(document).ready(function () {
                 <td>${formatDate(item.ngayThi)}</td>
                 <td>${item.exam.tenDT}</td>
                 <td>${item.diem}</td> 
-                <td><i class="far fa-edit"></i></td>           
+                <td id="${item.idBT}"><i class="far fa-edit detailButton"></i></td>           
             </tr>
            
                `
@@ -69,4 +69,9 @@ $(document).ready(function () {
         // Xử lý lỗi nếu có
         console.error('Đã xảy ra lỗi:', error);
       });  
+      $(document).on("click", ".detailButton", async function () {
+        var id = $(this).closest("td").attr("id");
+        console.log(id);
+        window.location.href = "HistoryTest.html?id=" + id;
+      });
 });  
